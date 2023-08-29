@@ -5,7 +5,7 @@ export async function initBookItem(path, container = ".book-item") {
   try {
     const bookItem = await bookService.getBookByPath(path);
     const bookCard = new Book(container);
-    bookCard.renderBookItem(bookItem);
+    await bookCard.renderBookItem(bookItem);
   } catch (error) {
     console.error(error);
   }

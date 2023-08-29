@@ -5,7 +5,7 @@ import initBookList from "@modules/initialize_book_list";
 const  childrenCategory = "children/";
 
 export function childrenPageRoute(){
-	const fillChildrenContainer =  createPage(childrenPageHTML);
+	const fillChildrenContainer = createPage(childrenPageHTML);
 	initBookList(childrenCategory);
 	return fillChildrenContainer
 }

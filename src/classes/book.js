@@ -6,8 +6,9 @@ export class Book {
     this.$el = document.querySelector(container);
   }
 
-  renderBookList(booksFromDB) {
+  async renderBookList(books) {
     this.$el.innerHTML = "";
+    const booksFromDB = await books;
 
     Object.values(booksFromDB).forEach((book) => {
       const bookItem = document.createElement("div");
@@ -18,9 +19,13 @@ export class Book {
     });
   }
 
-  renderBookItem(book) {
+  async renderBookItem(book) {
     this.$el.innerHTML = "";
-    const currentBook = bookItemTemplate(book);
-    this.$el.innerHTML = currentBook;
+
+    const bookFromDB = await book;
+    const bookItem = document.createElement("div");
+    bookItem.classList.add("book-item__wrapper");
+    bookItem.innerHTML = `${bookItemTemplate(bookFromDB)}`;
+    this.$el.append(bookItem);
   }
 }

@@ -1,6 +1,5 @@
-export function bookItemTemplate(book){
-const html = `
-	  <div class="book-item__wrapper">
+export function bookItemTemplate(book) {
+  const html = `
 
 	  	<div class="book-item__image">
 		  <img src="${book.image}" alt="${book.title}" />
@@ -45,7 +44,6 @@ const html = `
 				</p>
 			</div>
 		</div>
-	  </div>
-`
-  return html
+`;
+  return html;
 }

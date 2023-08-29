@@ -3,7 +3,6 @@ import { createPage } from "@modules/routing";
 import bookService from "@services/book.service";
 import { Book } from "@classes/Book";
 
-// import { handleLinksListener } from "@modules/routing";
 
 const comicsCategory = "comics/";
 
@@ -31,7 +30,6 @@ async function initAllComicsList(){
 		const bookCard = new Book(".book-list");
 		bookCard.renderBookList(updatedContent);
 
-		// handleLinksListener("a");
 	} catch (error) {
 		console.error(error);
 	}

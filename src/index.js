@@ -10,13 +10,25 @@ import "@styles/footer.css";
 import "@styles/book-list.css";
 import "@styles/book-item.css";
 
-import { initializeApp } from 'firebase/app';
 
 import "@modules/navigation.js";
 import "@modules/routing.js";
 
+import { initializeApp } from 'firebase/app';
+import { changeRoute } from "@modules/routing";
 // import { initialize } from "@modules/mock_data";
 // initialize()
+
+// document.addEventListener("click", (event) => {
+//   const isLink = event.target.closest("A");
+//   if(isLink){
+//     event.preventDefault();
+//     const href = isLink.getAttribute("href");
+//     console.log(href);
+//     window.history.pushState(null, null, href);
+//     changeRoute(href)
+//   }
+// })
 
 const firebaseConfig = {
   apiKey: "AIzaSyDeWqn8q0-DMLGAP0jpfFhZ5WSgtwZ7ncM",

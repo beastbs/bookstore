@@ -8,9 +8,6 @@
 	padding: 0px 50px;
 	font-size: 1.2rem;
  }
- /* #page .book-list > div{
-	
- } */
  
  #page .book-list .book {
 	width: 270px;
@@ -55,7 +52,7 @@
 	align-items: center;
  }
 
- /* dropdown */
+ /* section-icons */
 
 .category-item{
 	padding: 25px 50px 0px;
@@ -70,16 +67,17 @@
   padding: 25px 0px;
 }
 
-.category-item a {
+.category-item__wrapper a {
 	padding: 20px;
+	text-align: center;
 }
-.category-item a:hover{
+.category-item__wrapper a:hover{
 	background-color: var(--global-hover-links-color);
 
 }
 
-.category-item img{
+.category-item__wrapper img{
 	width: 50px;
 	height: 50px;
 	margin-bottom: 5px;
-}
+} 

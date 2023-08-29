@@ -5,11 +5,12 @@ function getCurrentPath(){
 	const isFictionPage = window.location.pathname === "/fiction";
 	const isComicsPage = window.location.pathname === "/comics";
 
-	return isFictionPage || isComicsPage 
+	return (isFictionPage || isComicsPage )
 	?  `${window.location.pathname}/${book.category}`
 	:  window.location.pathname
-	}
 
+}
+	
   const html = `
 	  <a href="${getCurrentPath()}/product/${book._id}">
 	  <div class="book__image">
