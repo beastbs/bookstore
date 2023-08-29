@@ -1,0 +1,41 @@
+[
+	{
+      "title": "Harry Potter and the Chamber of Secrets",
+      "_id": "bbb66c7a41e811e",
+      "authors": "J. K. Rowling",
+      "category": "children",
+      "pages": 400,
+      "coverType": "hardcover",
+      "language": "English",
+      "price": 22.79,
+      "description": "A stunning new edition of J.K. Rowling's Harry Potter and the Chamber of Secrets, with beautiful full color illustrations and eight interactive paper craft elements featuring the Whomping Willow, the Weasleys' Burrow, and more. A gift to be treasured by Harry Potter fans and book lovers of all ages!Prepare to be dazzled by this new edition of J.K. Rowling's Harry Potter and the Chamber of Secrets,designed and illustrated by MinaLima. With over 150 full-color illustrations and eight exclusive, interactive paper craft elements, readers will travel via the Floo Network, watch out for the Whomping Willow, reveal the spiral staircase to Dumbledore's office, pull Mandrakes from their pots, and more.This keepsake edition is the perfect gift for Harry Potter fans of all ages, a beautiful addition to any collector's bookshelf, and an enchanting way to introduce this beloved series to a new generation of readers.",
+      "image": "https://balka-book.com/files/2021/05_03/21_32/u_files_store_1_485885.jpg",
+      "currency": "$"
+    },
+    {
+      "title": "The Midnight Children",
+      "_id": "bbb66ebe41e811e",
+      "authors": "Dan Gemeinhart",
+      "category": "children",
+      "pages": 352,
+      "coverType": "hardcover",
+      "language": "English",
+      "price": 15.80,
+      "description": "In the dead of night, a truck arrives in Slaughterville, a small town curiously named after its windowless slaughterhouse. Seven mysterious kids with suitcases step out of the vehicle and into an abandoned home on a dead-end street, looking over their shoulders to make sure they aren't noticed. But Ravani Foster covertly witnesses their arrival from his bedroom window. Timid and lonely, Ravani is eager to learn everything he can about his new neighbors: What secrets are they hiding? And most mysterious of all...where are the adults? Yet amid this shadowy group of children, Ravani finds an unexpected friend in the warm and gutsy Virginia. But with this friendship comes secrets revealed--and danger. When Ravani learns of a threat to his new friends, he must fight to keep them safe, or lose the only person who has ever understood him.",
+      "image": "https://images-us.bookshop.org/ingram/9781250196729.jpg?height=500&v=v2-a2991efd8277aa3525dec4e72dda2dfa",
+      "currency": "$"
+    },
+    {
+      "title": "Juneteenth: A Children's Story Special Edition",
+      "_id": "bbb66fd641e811e",
+      "authors": "Opal Lee ",
+      "category": "children",
+      "pages": 38,
+      "coverType": "hardcover",
+      "language": "English",
+      "price":26.44,
+      "description": "The 'Grandmother of Juneteenth, ' Ms. Opal Lee advocates for the power of education to change the world. As an engaging and captivating way to introduce the history of slavery and freedom to children in words they can understand, Ms. Opal highlights the celebration of Juneteenth and the importance of commemorating this milestone all across America. Juneteenth: A Children's Story Special Edition will help to facilitate conversation and deeper learning about this important part of United States history now marked as a national holiday.",
+      "image": "https://images-us.bookshop.org/ingram/9798985458800.jpg?height=500&v=v2",
+      "currency": "$"
+    }
+]

@@ -1,0 +1,41 @@
+[
+	{
+		  "title": "Атлант розправив плечі",
+		  "_id": "bbb664f041e811e",
+		  "authors": "Айн Рэнд",
+		  "category": "classic",
+		  "pages": 620,
+		  "coverType": "hardcover",
+		  "language": "Украї́нська",
+		  "price": 7.99,
+		  "description": "'Атлант розправив плечі' magnus opus Айн Ренд, який авторка писала впродовж 12 років, став її найгучнішим бестселером, одним із найвпливовіших художніх творів світової літератури. Згідно з даними опитування Бібліотеки Конгресу США, це друга після Біблії книга, яка змінила життя американських читачів. Три частини трилогії названі відповідно до основних законів логіки: 'Несуперечність', 'Або-або', 'А є А'",
+		  "image": "https://m.media-amazon.com/images/I/41yFF55NowL._SY346_.jpg",
+		  "currency": "$"
+		},
+		{
+			"title": "Joan of Arc",
+			"_id": "b37b26e5a9a34b4",
+			"authors": "Mark Twain",
+			"category": "classic",
+			"pages": 455,
+			"coverType": "paperback",
+			"language": "English",
+			"price": 17.62,
+			"description": "Very few people know that Mark Twain (Samuel Clemens) wrote a major work on Joan of Arc. Still fewer know that he considered it not only his most important but also his best work. He spent twelve years in research and many months in France doing archival work and then made several attempts until he felt he finally had the story he wanted to tell. He reached his conclusion about Joan's unique place in history only after studying in detail accounts written by both sides, the French and the English. Because of Mark Twain's antipathy to institutional religion, one might expect an anti-Catholic bias toward Joan or at least toward the bishops and theologians who condemned her. Instead one finds a remarkably accurate biography of the life and mission of Joan of Arc told by one of this country's greatest storytellers. The very fact that Mark Twain wrote this book and wrote it the way he did is a powerful testimony to the attractive power of the Catholic Church's saints. This is a book that really will inform and inspire. 'I like Joan of Arc best of all my books; and it is the best; I know it perfectly well. And besides, it furnished me seven times the pleasure afforded me by any of the others; twelve years of preparation, and two years of writing. The others needed no preparation and got none.'",
+			"image": "https://images-us.bookshop.org/ingram/9780898702682.jpg?height=500&v=v2",
+			"currency": "$"
+		 },
+		 {
+			"title": "A Vintage Christmas: A Collection of Classic Stories and Poems",
+			"_id": "b37b26t4a9a74b4",
+			"authors": "Louisa May Alcott, Mark Twain, Charles Dickens, L. M. Montgomery",
+			"category": "classic",
+			"pages": 336,
+			"coverType": "hardcover",
+			"language": "English",
+			"price": 16.73,
+			"description": "Filled with stories that have been part of the Christmas season for generations, A Vintage Christmas is a unique collection of lesser-known Christmas tales, reflections, and poems from beloved authors across the centuries and makes the perfect gift for the reader in your life. This beautiful treasury will take you back to firesides, simple gifts, and warm family moments of Christmases past as you cherish the timeless truths and joys of the season. Discover a charming story from L. M. Montgomery about love and sacrifice in a little log house. See Christmas through the eyes of a child in a New England colonial village with Harriet Beecher Stowe. Remember the reason Christ came to earth in the poetry of Anne Brontë. Share with your family the delightful letter Mark Twain wrote as Santa Claus to his three-year-old daughter. A Vintage Christmas includes stories from Louisa May Alcott, Charles Dickens, Ralph Henry Barbour, Harriet Beecher Stowe, Mark Twain, L. M. Montgomery, and William Dean Howells, as well as poems from Eliza Cook, Christina Rossetti, William Makepeace Thackeray, Joyce Kilmer, Henry Wadsworth Longfellow, and Samuel Taylor Coleridge. A Vintage Christmas is a timeless reminder that the heart of the holiday never changes.",
+			"image": "https://images-us.bookshop.org/ingram/9780785224136.jpg?height=500&v=v2",
+			"currency": "$"
+		 }
+]

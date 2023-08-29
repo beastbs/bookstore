@@ -1,0 +1,41 @@
+:root {
+  --white-color: #fff;
+  --header-text-color: rgb(49,49,50);
+  --globalnav-background: rgb(251, 251, 253);
+  --global-text-color: rgb(29,29,30);
+  --global-second-text-color: rgb(110, 110, 115);
+
+  --global-links-color: #333336;
+  --global-hover-links-color: rgb(233, 233, 237);
+  --global-sections-background: rgb(242,242,244);
+  --global-second-sections--background: #6E6E73;
+  --global-hover-book-bg: rgb(224, 224, 226);
+
+  --global-bg-transition: background-color .3s ease;
+
+  --button-background: #4e42d4;
+  --box-shadow-button-color: rgba(236, 116, 149, 0.75);
+  --global-box-shadow:  0px 3px 30px 20px rgba(0,0,0,0.2);
+  --global-border-shadow: 1px solid #e7e7e7;
+  --global-gradient-button-background: radial-gradient(
+    circle farthest-corner at 100% 0,
+    #f09c33 0%,
+    #f59234 4%,
+    #f98736 7%,
+    #fd7b38 10%,
+    #ff6e3c 14%,
+    #ff5f41 18%,
+    #ff4e46 21%,
+    #ff384b 25%,
+    #fd1851 29%,
+    #f90059 32%,
+    #f50062 36%,
+    #f0006c 39%,
+    #e90077 43%,
+    #e10083 46%,
+    #d70090 50%,
+    #4e42d4 75%,
+    #4e42d4 100%
+  );
+  
+}

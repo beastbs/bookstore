@@ -1,0 +1,26 @@
+.comics{
+	padding: 25px 50px 0px;
+	font-size: 1.2rem;
+}
+.comics__categories{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  border-bottom: 2px solid var(--global-second-sections--background);
+  border-top: 2px solid var(--global-second-sections--background);
+  padding: 25px 0px;
+}
+
+.comics__categories a {
+	padding: 20px;
+}
+.comics__categories a:hover{
+	background-color: var(--global-hover-links-color);
+
+}
+
+.comics__categories img{
+	width: 50px;
+	height: 50px;
+	margin-bottom: 5px;
+}

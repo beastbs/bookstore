@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Miles Morales (Marvel Spider-Man)",
+    "_id": "bbb66a2c41e811e",
+    "authors": "Frank Berrios",
+    "category": "marvel",
+    "pages": 24,
+    "coverType": "hardcover",
+    "language": "English",
+    "price": 5.57,
+    "description": "Meet Marvel's Spider-Man from another universe--Miles Morales. Boys and girls ages 2 to 5 will love this action-packed Little Golden Book as they learn about the web-slinger's amazing powers as well as his faithful friends and fiercest foes!",
+    "image": "https://images-us.bookshop.org/ingram/9780593173244.jpg?height=500&v=v2",
+    "currency": "$"
+  },
+  {
+    "title": "Marvel Encyclopedia, New Edition",
+    "_id": "bbj36a7c41e811e",
+    "authors": "Stephen Wiacek, Stan Lee, Adam Bray, DK",
+    "category": "comics",
+    "pages": 448,
+    "coverType": "hardcover",
+    "language": "English",
+    "price": 37.2,
+    "description": "Keep up with the ever-expanding Marvel Universe with the new edition of DK's best-selling Marvel Encyclopedia, featuring an introduction by Marvel Comics supremo Stan Lee. Updated and expanded, this definitive Who's Who of Marvel Comics reveals vital info and secret histories of more than 1200 classic and brand new Marvel characters, and provides the lowdown on recent key events including Civil War 2, Secret Empire, and Infinity Countdown.",
+    "image": "https://images-us.bookshop.org/ingram/9781465478900.jpg?height=500&v=v2-1a460a38b190217c825e662accb75634",
+    "currency": "$"
+  }
+]

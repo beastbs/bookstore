@@ -1,0 +1,67 @@
+[
+  {
+    "title": "It",
+    "_id": "a20b87a27664a33",
+    "authors": "Stephen King",
+    "category": "horror",
+    "pages": 1184,
+    "coverType": "paperback",
+    "language": "English",
+    "price": 23.51,
+    "description": "Welcome to Derry, Maine. It’s a small city, a place as hauntingly familiar as your own hometown. Only in Derry the haunting is real.They were seven teenagers when they first stumbled upon the horror. Now they are grown-up men and women who have gone out into the big world to gain success and happiness. But the promise they made twenty-eight years ago calls them reunite in the same place where, as teenagers, they battled an evil creature that preyed on the city’s children. Now, children are being murdered again and their repressed memories of that terrifying summer return as they prepare to once again battle the monster lurking in Derry’s sewers.Readers of Stephen King know that Derry, Maine, is a place with a deep, dark hold on the author. It reappears in many of his books, including Bag of Bones, Hearts in Atlantis, and 11/22/63. But it all starts with It.",
+    "image": "https://images-us.bookshop.org/ingram/9781501142970.jpg?height=500&v=v2-7de1a9a8059fd7225e9b60db15626883",
+    "currency": "$"
+  },
+  {
+    "title": "Атлант розправив плечі",
+    "_id": "bbb664f041e811e",
+    "authors": "Айн Рэнд",
+    "category": "classic",
+    "pages": 620,
+    "coverType": "hardcover",
+    "language": "Украї́нська",
+    "price": 7.99,
+    "description": "'Атлант розправив плечі' magnus opus Айн Ренд, який авторка писала впродовж 12 років, став її найгучнішим бестселером, одним із найвпливовіших художніх творів світової літератури. Згідно з даними опитування Бібліотеки Конгресу США, це друга після Біблії книга, яка змінила життя американських читачів. Три частини трилогії названі відповідно до основних законів логіки: 'Несуперечність', 'Або-або', 'А є А'",
+    "image": "https://m.media-amazon.com/images/I/41yFF55NowL._SY346_.jpg",
+    "currency": "$"
+  },
+  {
+    "title": "Essential Iron Man, Vol. 1 (Marvel Essentials)",
+    "_id": "bbb66a2c41e811e",
+    "authors": "Stan Lee",
+    "category": "marvel",
+    "pages": 512,
+    "coverType": "paperback",
+    "language": "English",
+    "price": 8.48,
+    "description": "Experience the armored Avenger's earliest adventures - including classic confrontations with arch-foes Crimson Dynamo, the Mandarin, and the Titanium Man. Guest-starring the X-Men, Captain America, and the Black Widow.",
+    "image": "https://m.media-amazon.com/images/I/51ACSKBXKQL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
+    "currency": "$"
+  },
+  {
+    "title": "JavaScript: The Definitive Guide: Master the World's Most-Used Programming Language",
+    "_id": "bbb66b6241e811e",
+    "authors": "David Flanagan",
+    "category": "programming",
+    "pages": 706,
+    "coverType": "paperback",
+    "language": "English",
+    "price": 50.99,
+    "description": "JavaScript is the programming language of the web and is used by more software developers today than any other programming language. For nearly 25 years this best seller has been the go-to guide for JavaScript programmers. The seventh edition is fully updated to cover the 2020 version of JavaScript, and new chapters cover classes, modules, iterators, generators, Promises, async/await, and metaprogramming. You’ll find illuminating and engaging example code throughout.This book is for programmers who want to learn JavaScript and for web developers who want to take their understanding and mastery to the next level. It begins by explaining the JavaScript language itself, in detail, from the bottom up. It then builds on that foundation to cover the web platform and Node.js.",
+    "image": "https://images.prom.ua/2768082648_w640_h640_javascript-polnoe-rukovodstvo.jpg",
+    "currency": "$"
+  },
+  {
+    "title": "Injustice: Gods Among Us Year One: The Complete Collection",
+    "_id": "bbb6669e41e811e",
+    "authors": "Tom Taylor ",
+    "category": "dc",
+    "pages": 424,
+    "coverType": "paperback",
+    "language": "English",
+    "price": 11.99,
+    "description": "Forget everything you think you know about the DC Universe. Tradition is tossed aside and chaos erupts in Injustice: Gods Among Us Year One—The Complete Edition, inspired by the video game phenomenon! This graphic novel edition collects the initial year of the best-selling series in its entirety for the first time!Superman is Earth’s greatest hero. But when the Man of Steel can’t protect the thing he holds most dear, he decides to stop trying to save the world—and start ruling it.Now, the Last Son of Krypton is enforcing peace on Earth by any means necessary. Only one man stands between Superman and absolute power: Batman. And the Dark Knight will use any method at his disposal to stop his former friend from reshaping the world in his shattered image.Written by Tom Taylor (Earth 2) with art by Jheremy Raapack (Resident Evil), Mike S. Miller (A Game of Thrones) and more, this thrilling graphic novel collects Injustice: Gods Among Us digital chapters 1-36 and in single magazine form as Injustice: Gods Among Us 1-12 and Injustice: Gods Among Us Annual #1.",
+    "image": "https://balka-book.com/files/2023/07_28/01_12/u_files_store_18_49.jpg",
+    "currency": "$"
+  }
+]

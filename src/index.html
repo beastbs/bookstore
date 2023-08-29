@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Here You can find all book what you need!"
+    />
+    <meta name="keywords" content="book, books, buy book, book store" />
+    <meta name="Aithor" content="Borys Chepurnyi" />
+    <title>bookstore</title>
+    <link
+      rel="shortcut icon"
+      href="https://firebasestorage.googleapis.com/v0/b/bookstore-a6f57.appspot.com/o/images%2Flogo%2Flogo.png?alt=media&token=e365840f-46d3-4389-b942-64e6ec748860"
+      type="image/png"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header__logo">
+        <a href="/home" class="route-link">
+          <img src="https://firebasestorage.googleapis.com/v0/b/bookstore-a6f57.appspot.com/o/images%2Flogo%2Flogo.png?alt=media&token=e365840f-46d3-4389-b942-64e6ec748860" alt="Logo">
+        </a>
+      </div>
+
+      <nav class="header__navigation">
+        <ul>
+          <li>
+            <div class="header__navigation-dropdown">
+             <a href="/fiction" class="route-link">Fiction</a>
+             <img src="https://firebasestorage.googleapis.com/v0/b/bookstore-a6f57.appspot.com/o/images%2Ficons%2Fchevron-down.svg?alt=media&token=2a87f46d-e44e-4348-a26a-89732a74c192" alt="chevron-down">
+              <div class="header__navigation-dropdown-content">
+                <a href="/fiction/horror" class="route-link">Horror</a>
+                <a href="/fiction/fantasy" class="route-link">Fantasy</a>
+                <a href="/fiction/classic" class="route-link">Classic</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="/thriller" class="route-link">Mystery & Thriller</a></li>
+          <li><a href="/biography-history" class="route-link">Biographies & History</a></li>
+          <li>
+            <div class="header__navigation-dropdown">
+              <a href="/comics" class="route-link">Comics</a>
+              <img src="https://firebasestorage.googleapis.com/v0/b/bookstore-a6f57.appspot.com/o/images%2Ficons%2Fchevron-down.svg?alt=media&token=2a87f46d-e44e-4348-a26a-89732a74c192" alt="chevron-down">
+              <div class="header__navigation-dropdown-content">
+                <a href="/comics/marvel" class="route-link">Marvel</a>
+                <a href="/comics/dc" class="route-link">DC</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="/children" class="route-link">Children's</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__button-search">
+        <button type="button">
+          <img src="https://firebasestorage.googleapis.com/v0/b/bookstore-a6f57.appspot.com/o/images%2Ficons%2Fbx-search-alt.svg?alt=media&token=353e87a9-b60c-428c-bd91-47920d9d9ecc" alt="search" />
+        </button>
+      </div>
+
+      <div  class="header__form-search">
+        <form>
+          <button type="submit">
+            <img src="https://firebasestorage.googleapis.com/v0/b/bookstore-a6f57.appspot.com/o/images%2Ficons%2Fbx-search-alt.svg?alt=media&token=353e87a9-b60c-428c-bd91-47920d9d9ecc" alt="search" />
+          </button>
+
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search book"
+          />
+
+          <button type="button">
+            <img src="https://firebasestorage.googleapis.com/v0/b/bookstore-a6f57.appspot.com/o/images%2Ficons%2Fbx-x-circle.svg?alt=media&token=6cacd81e-08ac-4b29-9212-f75c287d83d9" alt="clear" />
+          </button>
+        </form>
+
+        <div id="quick-links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li>
+              <a href="/fiction/fantasy" class="route-link">
+                <img src="https://firebasestorage.googleapis.com/v0/b/bookstore-a6f57.appspot.com/o/images%2Ficons%2Flink-arrow.svg?alt=media&token=8ac82684-1d37-4837-b181-f0e625e809ac" alt="right arrow" />
+                <span>Fantasy</span>
+              </a>
+            </li>
+            <li>
+              <a href="/comics/marvel" class="route-link">
+                <img src="https://firebasestorage.googleapis.com/v0/b/bookstore-a6f57.appspot.com/o/images%2Ficons%2Flink-arrow.svg?alt=media&token=8ac82684-1d37-4837-b181-f0e625e809ac" alt="right arrow" />
+                <span>Marvel</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="header__selected-books">
+        <a href="/favorites" class="route-link">
+          <img src="https://firebasestorage.googleapis.com/v0/b/bookstore-a6f57.appspot.com/o/images%2Ficons%2Fbx-favorites.svg?alt=media&token=cd64c189-ad1f-4305-83d6-458c491d7119" alt="favorites" />
+          <span>Favorites</span>
+        </a>
+
+        <a href="/cart" class="route-link">
+          <img src="https://firebasestorage.googleapis.com/v0/b/bookstore-a6f57.appspot.com/o/images%2Ficons%2Fbx-cart.svg?alt=media&token=49d2152a-8607-4429-ace1-9b1ffb86f8f5" alt="favorites" />
+          <span>Cart</span>
+        </a>
+
+      </div>
+    </header>
+
+    <main>
+      <div id="root"></div>
+    </main>
+
+    <footer>
+
+
+      <div class="footer__about">
+        <h2>About us</h2>
+        <span>This site was created in January 2022</span>
+      </div>
+      </div>
+      <div class="footer__contacts">
+        <h2>Contacts</h2>
+        <span>Author: Borys Chepurnyi</span>
+        <span>
+          Email: 
+          <a href="mailto:chepurnoyboris@gmail.com">chepurnoyboris@gmail.com</a>
+        </span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+# folders
+/node_modules
+/dist
+
+# files
+book.api.json
+
+# system
+.DS_Store

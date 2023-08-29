@@ -1,0 +1,21 @@
+footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  background-color: var(--global-sections-background);
+  padding: 25px 0px;
+}
+
+footer h2 {
+  margin-bottom: 10px;
+}
+
+footer span {
+  font-size: 1.3rem;
+}
+
+footer .footer__about,
+footer .footer__contacts {
+  display: flex;
+  flex-direction: column;
+}
