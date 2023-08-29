@@ -1,6 +1,6 @@
 import { Book } from "@classes/Book";
 import bookService from "@services/book.service";
-import { handleLinksListener } from "./routing";
+// import { handleLinksListener } from "./routing";
 
 async function initBookList(category, container = ".book-list") {
   try {
@@ -8,7 +8,7 @@ async function initBookList(category, container = ".book-list") {
     const bookCard = new Book(container);
     bookCard.renderBookList(content);
 
-    handleLinksListener("a")
+    // handleLinksListener("a")
   } catch (error) {
     console.error(error);
   }

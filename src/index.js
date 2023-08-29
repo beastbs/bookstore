@@ -2,15 +2,13 @@
 
 import "@styles/styles.css";
 import "@styles/button.css";
-import "@styles/book-card-styles.css";
 
 import "@styles/header.css";
 import "@styles/main.css";
 import "@styles/footer.css";
 
-import "@pages/home_page/home_page.css";
-import "@styles/book-list.css";;
-import "@pages/book_item/book_item_page.css";
+import "@styles/book-list.css";
+import "@styles/book-item.css";
 
 import { initializeApp } from 'firebase/app';
 
@@ -18,7 +16,6 @@ import "@modules/navigation.js";
 import "@modules/routing.js";
 
 // import { initialize } from "@modules/mock_data";
-
 // initialize()
 
 const firebaseConfig = {
