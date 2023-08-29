@@ -2,7 +2,7 @@ import comicsPageHTML from "./comics_page.html";
 import { createPage } from "@modules/routing";
 import bookService from "@services/book.service";
 import { Book } from "../../classes/Book";
-import "./comics_page.css";
+// import "./comics_page.css";
 // import { handleLinksListener } from "@modules/routing";
 
 const comicsCategory = "comics/";

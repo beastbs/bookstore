@@ -1,7 +1,7 @@
 import homePage from "./home_page.html";
-import { createPage, handleLinksListener } from "@modules/routing";
-import { initSliders } from "./components/slider_home_page";
-import { initBestsellers } from "./components/bestsellers_home_page";
+import { createPage } from "@modules/routing";
+import { initSliders } from "@pages/home_page/components/slider_home_page";
+import { initBestsellers } from "@pages/home_page/components/bestsellers_home_page";
 // import bookService from "@services/book.service";
 import "./home_page.css";
 

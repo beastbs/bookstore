@@ -20,9 +20,13 @@ module.exports = {
     extensions: [".js", ".json", ".png"],
     alias: {
       "@": path.resolve(__dirname, "src"),
-      "@modules": path.resolve(__dirname, "src/modules/"),
       "@pages": path.resolve(__dirname, "src/pages/"),
-      "@services": path.resolve(__dirname, "src/services/")
+      "@styles": path.resolve(__dirname, "src/css/"),
+      "@config": path.resolve(__dirname, "src/config/"),
+      "@classes": path.resolve(__dirname, "src/classes/"),
+      "@modules": path.resolve(__dirname, "src/modules/"),
+      "@services": path.resolve(__dirname, "src/services/"),
+      "@components": path.resolve(__dirname, "src/components/")
     },
   },
   devServer: {

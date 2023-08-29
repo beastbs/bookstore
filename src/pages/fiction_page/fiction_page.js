@@ -1,8 +1,8 @@
 import fictionPage from "./fiction_page.html";
 import { createPage } from "@modules/routing";
-import { Book } from "../../classes/Book";
+import { Book } from "@classes/Book";
 import bookService from "@services/book.service";
-import "./fiction_page.css";
+
 // import { handleLinksListener } from "../../modules/routing";
 
 const fictionCategory = "fiction/";

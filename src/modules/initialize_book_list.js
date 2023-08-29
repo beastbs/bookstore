@@ -1,4 +1,4 @@
-import { Book } from "../classes/Book";
+import { Book } from "@classes/Book";
 import bookService from "@services/book.service";
 // import { handleLinksListener } from "./routing";
 
