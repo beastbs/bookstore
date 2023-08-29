@@ -1,9 +1,9 @@
 @import "./_variables.css";
+@import "./book-card-styles.css";
 @import "./button.css";
 @import "./header.css";
 @import "./main.css";
 @import "./footer.css";
-@import "./book-card-styles.css";
 
 
 @font-face {
