@@ -11,7 +11,7 @@ export async function initBestsellers(container) {
     const elements = Object.values(content).map((book) => {
       const html = `
 		<li>
-			<a href="/bestsellers/${book._id}">
+			<a href="/bestsellers/product/${book._id}">
 			  <div class="home__bestsell-content">
 			     <div>
 			       <img src="${book.image}" alt="${book.title}" />
@@ -31,7 +31,7 @@ export async function initBestsellers(container) {
     homeBestsellContainer.innerHTML = title;
     homeBestsellContainer.innerHTML += `<ul>${elements.join("")}</ul>`;
 
-	 return homeBestsellContainer;
+    return homeBestsellContainer;
   } catch (error) {
     console.error(error);
   }

@@ -1,8 +1,17 @@
 import { cutString } from "./cut_string";
 
 export function bookCardTemplate(book) {
+function getCurrentPath(){
+	const isFictionPage = window.location.pathname === "/fiction";
+	const isComicsPage = window.location.pathname === "/comics";
+
+	return isFictionPage || isComicsPage 
+	?  `${window.location.pathname}/${book.category}`
+	:  window.location.pathname
+	}
+
   const html = `
-	  <a href="${window.location.pathname}/product/${book._id}" class="route-link">
+	  <a href="${getCurrentPath()}/product/${book._id}">
 	  <div class="book__image">
 	    <img src="${book.image}" alt="${book.title}" />
 	  </div>

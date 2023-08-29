@@ -40,6 +40,27 @@ const rootContainer = document.getElementById("root");
 const productItemPath = "/product";
 let currentRoute = "";
 
+// handleLinksListener("a")
+// export function handleLinksListener(selector){
+//   const links = document.querySelectorAll(selector);
+//   links.forEach(link => {
+//     link.addEventListener("click", (e) => {
+//       e.preventDefault();
+//       const href = link.getAttribute("href");
+//       window.history.pushState(null,null, href);
+//       changeRoute(href)
+//     })
+//   })
+// }
+
+export function createPage(currentPage) {
+  const section = document.createElement("section");
+  section.id = "page";
+  section.innerHTML = currentPage;
+  
+  return section;
+}
+
 function redirect(route) {
   if (route === "/") {
     route = "/home";
@@ -50,7 +71,7 @@ function redirect(route) {
 
 export function changeRoute(route) {
   rootContainer.innerHTML = "";
-  const pageToMove = pages[route];
+  const pageToMove = pages[route] || page404Route;
   if (route.includes(productItemPath)) {
     rootContainer.append(bookItemRoute());
     return;
@@ -63,41 +84,4 @@ function router(route) {
   currentRoute = redirect(route);
   changeRoute(currentRoute);
 }
-
 router(window.location.pathname);
-
-// updateRoute();
-// export function updateRoute() {
-//   const path = window.location.pathname;
-//   const currentPage = pages[path] || page404Route;
-//   rootContainer.innerHTML = "";
-//   console.log(path);
-//   if (path.includes(productItemPath)) {
-//     rootContainer.append(bookItemRoute());
-//     return;
-//   }
-
-//   rootContainer.append(currentPage());
-// }
-
-// handleLinksListener();
-// export function handleLinksListener(selector = "a.route-link") {
-//   const links = document.querySelectorAll(selector);
-
-//   links.forEach((link) => {
-//     link.addEventListener("click", (event) => {
-//       event.preventDefault();
-//       const href = link.getAttribute("href");
-//       window.history.pushState(null, null, href);
-//       updateRoute();
-//     });
-//   });
-// }
-
-export function createPage(currentPage) {
-  const section = document.createElement("section");
-  section.id = "page";
-  section.innerHTML = currentPage;
-
-  return section;
-}

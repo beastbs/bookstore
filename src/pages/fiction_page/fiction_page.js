@@ -3,6 +3,7 @@ import { createPage } from "@modules/routing";
 import { Book } from "../../classes/Book";
 import bookService from "@services/book.service";
 import "./fiction_page.css";
+// import { handleLinksListener } from "../../modules/routing";
 
 const fictionCategory = "fiction/";
 
@@ -18,6 +19,8 @@ async function initAllFictionBooks() {
     const updatedContent = getArrayDataFromDB(content);
     const bookCard = new Book(".book-list");
     bookCard.renderBookList(updatedContent);
+
+    // handleLinksListener("a");
   } catch (error) {
     console.error(error);
   }
