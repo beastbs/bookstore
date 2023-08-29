@@ -1,8 +1,8 @@
-.fiction{
+.category-item{
 	padding: 25px 50px 0px;
 	font-size: 1.2rem;
 }
-.fiction__categories{
+.category-item__wrapper{
   display: flex;
   justify-content: center;
   gap: 100px;
@@ -11,15 +11,15 @@
   padding: 25px 0px;
 }
 
-.fiction__categories a {
+.category-item a {
 	padding: 20px;
 }
-.fiction__categories a:hover{
+.category-item a:hover{
 	background-color: var(--global-hover-links-color);
 
 }
 
-.fiction__categories img{
+.category-item img{
 	width: 50px;
 	height: 50px;
 	margin-bottom: 5px;

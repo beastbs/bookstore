@@ -40,18 +40,18 @@ const rootContainer = document.getElementById("root");
 const productItemPath = "/product";
 let currentRoute = "";
 
-// handleLinksListener("a")
-// export function handleLinksListener(selector){
-//   const links = document.querySelectorAll(selector);
-//   links.forEach(link => {
-//     link.addEventListener("click", (e) => {
-//       e.preventDefault();
-//       const href = link.getAttribute("href");
-//       window.history.pushState(null,null, href);
-//       changeRoute(href)
-//     })
-//   })
-// }
+handleLinksListener("a")
+export function handleLinksListener(selector){
+  const links = document.querySelectorAll(selector);
+  links.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const href = link.getAttribute("href");
+      window.history.pushState(null,null, href);
+      changeRoute(href)
+    })
+  })
+}
 
 export function createPage(currentPage) {
   const section = document.createElement("section");

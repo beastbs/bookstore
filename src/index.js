@@ -9,8 +9,7 @@ import "@styles/main.css";
 import "@styles/footer.css";
 
 import "@pages/home_page/home_page.css";
-import "@pages/fiction_page/fiction_page.css";
-import "@pages/comics_page/comics_page.css";
+import "@styles/book-list.css";;
 import "@pages/book_item/book_item_page.css";
 
 import { initializeApp } from 'firebase/app';
