@@ -14,7 +14,8 @@
 	height: 600px;
 	padding: 10px;
 	background-color: var(--global-hover-links-color);
- 
+   border-radius: 3px;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -24,6 +25,7 @@
  }
  #page .book-list .book:hover .book__image{
 	filter: brightness(0.4);
+	transition: filter .3s linear;
  }
  #page .book .book__image {
 	width: 100%;

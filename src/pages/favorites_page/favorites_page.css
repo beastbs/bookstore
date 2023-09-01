@@ -1,0 +1,63 @@
+.fav-page #remove-button{
+	position:absolute;
+	top: 20px;
+	left: 20px;
+} 
+
+.fav-page #remove-item__button-icon button{
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+
+.fav-page{
+	position: relative;
+	display: flex;
+	flex-flow: wrap row;
+	justify-content: flex-start;
+	gap: 50px;
+	padding: 50px 200px;
+}
+
+.fav-page .fav-book{
+	width: 300px;
+	position: relative;
+}
+.fav-page .fav-book:hover .book__image {
+	filter: brightness(0.4);
+	transition: filter .3s linear;
+}
+
+.fav-page .fav-book a{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 25px 5px;
+	background-color: var(--global-favorite-background);
+	border-radius: 3px;
+}
+
+.fav-page .book__image{
+	width: 150px;
+	height: 225px;
+	margin-bottom: 5px;
+}
+
+.fav-page .book__image img{
+	width: 100%;
+	height: 100%;
+}
+
+.fav-page .book__description p {
+  margin-bottom: 5px;
+  text-align: center;
+}
+.fav-page .book__description p:first-child{
+	font-size: 1.2em;
+	font-family: Raleway-bold;
+}
+.fav-page .book__description p span{
+	opacity: 0.5;
+}
+

@@ -2,6 +2,7 @@ import comicsPageHTML from "./comics_page.html";
 import { createPage } from "@modules/routing";
 import bookService from "@services/book.service";
 import { Book } from "@classes/Book";
+import{bookItemListener} from "@modules/book-listeners";
 
 
 const comicsCategory = "comics/";
@@ -30,6 +31,7 @@ async function initAllComicsList(){
 		const bookCard = new Book(".book-list");
 		bookCard.renderBookList(updatedContent);
 
+      bookItemListener(comicsCategory)
 	} catch (error) {
 		console.error(error);
 	}

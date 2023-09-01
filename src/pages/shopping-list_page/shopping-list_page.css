@@ -1,0 +1,53 @@
+.shopping-page{
+	padding: 25px 50px;
+	font-size: 1.2rem;
+}
+.shopping-page table {
+  width: 100%;
+}
+
+.shopping-page table thead th {
+  text-align: start;
+  font-family: "Relawey-bold";
+  font-size: 1.3em;
+  padding: 10px;
+}
+
+.shopping-page table tbody td{
+  padding: 10px;
+}
+
+
+.shopping-page table .shopping-page__image {
+  width: 175px;
+}
+.shopping-page table .shopping-page__image img {
+  width: 100%;
+}
+
+.shopping-page table .shopping-page__description{
+	display: flex;
+	flex-direction:column;
+}
+.shopping-page table .shopping-page__description p{
+	margin-bottom: 15px;
+}
+
+.shopping-page table tbody .shopping-page__description p:first-child{
+	font-size: 1.5rem;
+}
+
+.shopping-page table tbody .shopping-page__description p:last-child{
+  opacity: 0.5;
+}
+
+.shopping-page table tbody .shopping-page__qty input{
+	width: 40px;
+	padding: 8px 0px;
+	border: 1px solid var(--global-second-text-color);
+	text-align: end;
+	font-size: 1.2rem;
+}
+
+
+

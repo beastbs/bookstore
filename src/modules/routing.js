@@ -16,7 +16,7 @@ import { marvelPageRoute } from "@pages/comics_page/marvel_page/marvel_page";
 import { childrenPageRoute } from "@pages/children_page/children_page";
 
 import { favoritesPageRoute } from "@pages/favorites_page/favorites_page";
-import { cartPageRoute } from "@pages/cart_page/cart_page";
+import { shoppingListPageRoute } from "@pages/shopping-list_page/shopping-list_page";
 
 import { page404Route } from "@pages/page404/page404";
 
@@ -32,7 +32,7 @@ const pages = {
   "/comics/dc": dcPageRoute,
   "/comics/marvel": marvelPageRoute,
   "/children": childrenPageRoute,
-  "/cart": cartPageRoute,
+  "/cart": shoppingListPageRoute,
   "/favorites": favoritesPageRoute,
 };
 
@@ -41,14 +41,15 @@ const productItemPath = "/product";
 let currentRoute = "";
 
 document.addEventListener("click", (event) => {
-  const isLink = event.target.closest("A");
-  if(isLink){
+  const isLink = event.target.closest("a");
+
+  if (isLink) {
     event.preventDefault();
     const href = isLink.getAttribute("href");
     window.history.pushState(null, null, href);
-    changeRoute(href)
+    changeRoute(href);
   }
-})
+});
 
 function redirect(route) {
   if (route === "/") {
@@ -70,6 +71,7 @@ export function changeRoute(route) {
 }
 
 function router(route) {
+  console.log(route);
   currentRoute = redirect(route);
   changeRoute(currentRoute);
 }
@@ -79,6 +81,6 @@ export function createPage(currentPage) {
   const section = document.createElement("section");
   section.id = "page";
   section.innerHTML = currentPage;
-  
+
   return section;
 }

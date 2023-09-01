@@ -1,0 +1,26 @@
+.pop-up {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  height: 100px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  border-radius: 10px;
+  padding-left: 20px;
+}
+.pop-up__marker {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  bottom: -12.5px;
+  right: 50px;
+  background-color: inherit;
+  transform: rotate(45deg);
+}
+.pop-up__content {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}

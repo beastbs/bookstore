@@ -72,6 +72,7 @@
 .home__bestsell li {
   width: 220px;
   cursor: pointer;
+  border-radius: 3px;
 }
 .home__bestsell li:hover {
   background-color: var(--global-hover-links-color);

@@ -27,3 +27,22 @@
 	box-shadow: 0 4px 15px 0 var(--box-shadow-button-color);
 	transition: all 0.4s linear;
  }
+
+ #remove-button{
+	color: var(--white-color);
+	padding: 10px 25px;
+	font-size: 1.3rem;
+	border: none;
+	border-radius: 3px;
+	background-color:var(--global-danger-color);
+ }
+
+ #remove-button:hover{
+	background-color: var(--global-hover-danger-color);
+	transition: background-color .3s ease;
+ }
+
+ #remove-item__button-icon button{
+	border: none;
+	background: none;
+ }

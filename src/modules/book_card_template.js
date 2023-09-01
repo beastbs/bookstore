@@ -1,18 +1,17 @@
 import { cutString } from "./cut_string";
 
-export function bookCardTemplate(book) {
-function getCurrentPath(){
-	const isFictionPage = window.location.pathname === "/fiction";
-	const isComicsPage = window.location.pathname === "/comics";
+export function getCurrentPath(book) {
+  const isFictionPage = window.location.pathname === "/fiction";
+  const isComicsPage = window.location.pathname === "/comics";
 
-	return (isFictionPage || isComicsPage )
-	?  `${window.location.pathname}/${book.category}`
-	:  window.location.pathname
-
+  return isFictionPage || isComicsPage
+    ? `${window.location.pathname}/${book.category}`
+    : window.location.pathname;
 }
-	
+
+export function bookCardTemplate(book) {
   const html = `
-	  <a href="${getCurrentPath()}/product/${book._id}">
+	  <a href="${getCurrentPath(book)}/product/${book._id}" id=${book._id} data-category=${book.category}>
 	  <div class="book__image">
 	    <img src="${book.image}" alt="${book.title}" />
 	  </div>

@@ -2,6 +2,7 @@ import fictionPage from "./fiction_page.html";
 import { createPage } from "@modules/routing";
 import { Book } from "@classes/Book";
 import bookService from "@services/book.service";
+import{ bookItemListener } from "@modules/book-listeners";
 
 const fictionCategory = "fiction/";
 
@@ -17,6 +18,8 @@ async function initAllFictionBooks() {
     const updatedContent = getArrayDataFromDB(content);
     const bookCard = new Book(".book-list");
     bookCard.renderBookList(updatedContent);
+
+    bookItemListener(fictionCategory);
 
   } catch (error) {
     console.error(error);
