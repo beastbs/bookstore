@@ -31,7 +31,6 @@ export function initSliders(container) {
   updateIndicators();
 
   function updateSliderPosition() {
-    console.log("updated slider");
     const slideWidth = sliderContainer.children[0].offsetWidth;
     sliderContainer.style.transform = `translateX(${
       -slideIndex * slideWidth
@@ -72,7 +71,6 @@ export function initSliders(container) {
     const currentPosX = event.clientX;
     offsetX = currentPosX - startPosX;
     updateSliderPosition();
-    // sliderContainer.style.transform = `translateX(${offsetX}px)`;
   }
    handleDragEnd = () => {
     if (!isDragging) return;

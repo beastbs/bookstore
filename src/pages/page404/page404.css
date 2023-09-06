@@ -1,0 +1,16 @@
+.page404{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  font-size: 2rem;
+  padding-top: 50px;
+}
+
+.page404 h1{
+	font-size: 3rem;
+	font-family: "Relaway-bold";
+}
+
+
