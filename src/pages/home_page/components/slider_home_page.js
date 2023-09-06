@@ -5,6 +5,11 @@ import slide3 from "./slider_images/bookstackssmall3.jpeg";
 const sliderImages = [slide1, slide2, slide3];
 const totalSlides = sliderImages.length;
 
+let handleDragStart;
+let handleDrag;
+let handleDragEnd;
+let swipeSliderInterval;
+
 let slideIndex = 0;
 let isDragging = false;
 let startPosX = 0;
@@ -26,10 +31,15 @@ export function initSliders(container) {
   updateIndicators();
 
   function updateSliderPosition() {
+    console.log("updated slider");
     const slideWidth = sliderContainer.children[0].offsetWidth;
     sliderContainer.style.transform = `translateX(${
       -slideIndex * slideWidth
     }px)`;
+
+    if(window.location.pathname !== "/home"){
+      removeSliderListeners()
+    }
   }
 
   function updateIndicators() {
@@ -37,6 +47,7 @@ export function initSliders(container) {
     indicators.forEach((indicator, index) => {
       indicator.classList.toggle("indicator-active", index === slideIndex);
     });
+    
   }
 
   function createIndicators(index) {
@@ -50,21 +61,20 @@ export function initSliders(container) {
     });
   }
 
-  function handleDragStart(event) {
+   handleDragStart = (event) => {
     isDragging = true;
     startPosX = event.clientX;
     sliderContainer.style.transition = "none";
   }
 
-  function handleDrag(event) {
+   handleDrag = (event) => {
     if (!isDragging) return;
     const currentPosX = event.clientX;
     offsetX = currentPosX - startPosX;
     updateSliderPosition();
     // sliderContainer.style.transform = `translateX(${offsetX}px)`;
   }
-
-  function handleDragEnd() {
+   handleDragEnd = () => {
     if (!isDragging) return;
 
     isDragging = false;
@@ -88,22 +98,22 @@ export function initSliders(container) {
     }
     offsetX = 0;
     sliderContainer.style.transition = "";
+
     updateSliderPosition();
     updateIndicators();
   }
 
-  swipeSlider()
-  function swipeSlider(){
-	setInterval(() => {
-		slideIndex++;
-		if (slideIndex >= totalSlides) {
-			slideIndex = 0;
-		 } 
+   swipeSliderInterval = setInterval(() => {
+     slideIndex++;
+     if (slideIndex >= totalSlides) {
+       slideIndex = 0;
+      } 
+ 
+     updateSliderPosition();
+     updateIndicators();
+   }, 3000);
+ 
 
-		updateSliderPosition();
-		updateIndicators();
-	}, 4000);
-}
 
   sliderContainer.addEventListener("mousedown", handleDragStart);
   sliderContainer.addEventListener("touchstart", handleDragStart);
@@ -115,10 +125,28 @@ export function initSliders(container) {
   window.addEventListener("touchend", handleDragEnd);
   window.addEventListener("touchcancel", handleDragEnd);
 
+   function removeSliderListeners() {
+    sliderContainer.removeEventListener("mousedown", handleDragStart);
+    sliderContainer.removeEventListener("touchstart", handleDragStart);
+  
+    window.removeEventListener("mousemove", handleDrag);
+    window.removeEventListener("touchmove", handleDrag);
+  
+    window.removeEventListener("mouseup", handleDragEnd);
+    window.removeEventListener("touchend", handleDragEnd);
+    window.removeEventListener("touchcancel", handleDragEnd);
+  
+    clearInterval(swipeSliderInterval);
+  }
+  
 }
+
+
 
 function createElement(classes) {
   const div = document.createElement("div");
   div.classList.add(classes);
   return div;
 }
+
+

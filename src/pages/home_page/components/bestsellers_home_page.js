@@ -1,5 +1,6 @@
 import bookService from "@services/book.service";
 import { cutString } from "@modules/cut_string";
+import { getCurrentPath }from "@modules/book_card_template";
 
 export async function initBestsellers(container) {
   const homeBestsellContainer = container.querySelector(".home__bestsell");
@@ -11,7 +12,7 @@ export async function initBestsellers(container) {
     const elements = Object.values(content).map((book) => {
       const html = `
 		<li>
-			<a href="/bestsellers/product/${book._id}">
+			<a href="${getCurrentPath(book)}/product/${book._id}">
 			  <div class="home__bestsell-content">
 			     <div>
 			       <img src="${book.image}" alt="${book.title}" />

@@ -14,11 +14,9 @@ import "@modules/navigation.js";
 import "@modules/routing.js";
 
 import { initializeApp } from "firebase/app";
-import { changeRoute } from "@modules/routing";
 
-// import { initialize } from "@modules/mock_data";
-// initialize()
-
+import { initialize } from "@modules/mock_data";
+initialize();
 
 const firebaseConfig = {
   apiKey: "AIzaSyDeWqn8q0-DMLGAP0jpfFhZ5WSgtwZ7ncM",

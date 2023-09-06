@@ -4,19 +4,27 @@
 }
 .shopping-page table {
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .shopping-page table thead th {
-  text-align: start;
+  text-align: end;
   font-family: "Relawey-bold";
   font-size: 1.3em;
   padding: 10px;
+}
+
+.shopping-page table thead th:first-child{
+	text-align: start;
 }
 
 .shopping-page table tbody td{
   padding: 10px;
 }
 
+.shopping-page table tbody td:not(.shopping-page__image, .shopping-page__description){
+	text-align: end;
+}
 
 .shopping-page table .shopping-page__image {
   width: 175px;
@@ -47,6 +55,15 @@
 	border: 1px solid var(--global-second-text-color);
 	text-align: end;
 	font-size: 1.2rem;
+}
+
+.shopping-page table tfoot .shopping-page__total {
+	text-align: end;
+}
+
+.shopping-page table tfoot .shopping-page__total td{
+	font-size: 1.4rem;
+	font-family: "Raleway-bold";
 }
 
 

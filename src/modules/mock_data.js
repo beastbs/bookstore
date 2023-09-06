@@ -6,6 +6,7 @@ import thrillerBooks from "../mock/thriller.json";
 import biographyHistory from "../mock/biography-history.json";
 import marvelBooks from "../mock/marvel.json";
 import dcBooks from "../mock/dc.json";
+import bestHorrors from "../mock/best-horrors.json";
 
 import childrenBooks from "../mock/children.json";
 import bestsellersBooks from "../mock/bestsellers.json";
@@ -49,6 +50,10 @@ export async function initialize() {
 
 	for(const biography of biographyHistory){
 		await httpService.put("biography-history/" + biography._id, biography);
+	}
+
+	for(const horror of bestHorrors){
+		await httpService.put("best-horrors/" + horror._id, horror);
 	}
 
   } catch (error) {

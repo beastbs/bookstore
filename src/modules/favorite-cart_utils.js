@@ -3,6 +3,7 @@ import {
   setDataInLS,
   removeDataFromLS,
 } from "@services/local_storage.service";
+import { getCurrentPath } from "@modules/book_card_template";
 
 function createButton() {
   const button = document.createElement("button");
@@ -13,7 +14,7 @@ function createButton() {
 
 function favoritesTemplateHTML(book) {
   return `
-	<a href="${book.category}/product/${book._id}" id=${book._id}>
+	<a href="${getCurrentPath(book)}/product/${book._id}" id=${book._id}>
 		<div class="book__image">
 		<img src="${book.image}" alt="${book.title}" />
 		</div>
@@ -43,19 +44,19 @@ function shoppingTemplateHTML(book) {
   return `
      <tr>
 			<td class="shopping-page__image">
-			  <a href="${book.category}/product/${book._id}" id="${book._id}">
+			  <a href="${getCurrentPath(book)}/product/${book._id}" id="${book._id}">
 			    <img src="${book.image}" alt="${book.title}" />
 			  </a>
 			</td>
 			<td class="shopping-page__description">
-			  <a href="/${book.category}/product/${book._id}">
+			  <a href="${getCurrentPath(book)}/product/${book._id}">
 			    <p>${book.title}</p>
 			    <p>${book.authors}</p>
 			    <p>${book.coverType}</p>
 			  </a>
 			</td>
 			<td class="shopping-page__qty">
-			  <input type="number" value="${book.quantity}"/>
+			  <input type="number" min="1" value="${book.quantity}"/>
 			</td>
 			<td>
 			  ${book.price}${book.currency}
@@ -74,16 +75,44 @@ export function renderFavoriteOrCartList(container, key, title) {
   const bookListPage = container.children[0];
   const button = createButton();
 
+  container.addEventListener("input", (event) => {
+    const totalAmount = bookListPage.querySelector(".shopping-page__amount");
+    const inputNumber = event.target.closest(
+      ".shopping-page__qty input[type='number']"
+    );
+    const id = inputNumber.parentNode.parentNode.querySelector(
+      ".shopping-page__image a"
+    ).id;
+
+    if (inputNumber) {
+      bookListFromLS = bookListFromLS.map((book) =>
+        book._id === id
+          ? { ...book, quantity: Number(inputNumber.value) }
+          : book
+      );
+      setDataInLS(key, bookListFromLS);
+      totalAmount.innerHTML = countTotalAmount(bookListFromLS);
+    }
+
+  });
+
   container.addEventListener("click", (event) => {
     const removeAllButton = event.target.closest("#remove-button");
     const removeItemButton = event.target.closest("#remove-item__button-icon");
 
     if (removeAllButton) {
+
+      const isConfirmed = confirm("Are You sure to remove all books?")
+
+      if(!isConfirmed) return;
+
       removeDataFromLS(key);
-      bookListPage.innerHTML = `<div class="page__empty">${title} list is empty!</div>`;
+      container.innerHTML = `<div class="page__empty">${title} list is empty!</div>`;
     }
 
     if (removeItemButton) {
+
+		const totalAmount = bookListPage.querySelector(".shopping-page__amount");
       const parentNode = removeItemButton.parentNode;
       const itemId = parentNode.querySelector("a").id;
 
@@ -92,19 +121,20 @@ export function renderFavoriteOrCartList(container, key, title) {
       parentNode.remove();
       setDataInLS(key, bookListFromLS);
 
-		if(!bookListFromLS || bookListFromLS.length === 0){
-			container.innerHTML = `<div class="page__empty">${title} list is empty!</div>`;
-			removeDataFromLS(key);
-			return;
+		if(title === "Shopping"){
+	     totalAmount.innerHTML = countTotalAmount(bookListFromLS);
 		}
 
+      if (!bookListFromLS || bookListFromLS.length === 0) {
+        container.innerHTML = `<div class="page__empty">${title} list is empty!</div>`;
+        removeDataFromLS(key);
+        return;
+      }
     }
-
   });
 
-
   if (!bookListFromLS || bookListFromLS.length === 0) {
-	container.innerHTML = `<div class="page__empty">${title} list is empty!</div>`;
+    container.innerHTML = `<div class="page__empty">${title} list is empty!</div>`;
     return;
   }
 
@@ -132,6 +162,13 @@ export function renderFavoriteOrCartList(container, key, title) {
 			</tr>
 	`;
     const tbody = document.createElement("tbody");
+    const tfoot = document.createElement("tfoot");
+    const tfootContent = `
+	 	<tr class="shopping-page__total">
+		  <td colspan="3">Total: </td>
+		  <td class="shopping-page__amount">${countTotalAmount(bookListFromLS)}$</td>
+		</tr>
+	 `;
 
     bookListFromLS.forEach((book) => {
       const tr = shoppingTemplateHTML(book);
@@ -139,11 +176,25 @@ export function renderFavoriteOrCartList(container, key, title) {
     });
 
     thead.innerHTML = theadContent;
+
     table.append(thead);
     table.append(tbody);
+
+    tfoot.innerHTML = tfootContent;
+    table.append(tfoot);
+
     bookListPage.append(table);
     bookListPage.append(button);
 
     return;
   }
+}
+
+function countTotalAmount(bookList) {
+  const result = bookList.reduce(
+    (acc, curr) => (acc += curr.price * curr.quantity),
+    0
+  );
+
+  return result.toFixed(2);
 }

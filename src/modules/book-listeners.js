@@ -18,28 +18,26 @@ export function bookItemListener(path, container = ".book-list") {
   const page = document.querySelector(container);
 
   page.addEventListener("click", (event) => {
-	 const currentBook = event.target.closest(".book");
+    const currentBook = event.target.closest(".book");
     const buyButton = event.target.closest(".book__button-cart");
     const favButton = event.target.closest(".book__button-favorite");
-	 const bookCategory = currentBook.children[0].getAttribute("data-category");
-	 const bookId = currentBook.children[0].id;
+    const bookCategory = currentBook.children[0].getAttribute("data-category");
+    const bookId = currentBook.children[0].id;
 
-	 if(path === "fiction/" || path === "comics/"){
-		pathID = `${path}${bookCategory}/${bookId}`;
-	 } else{
-		pathID = `${path}${bookId}`;
-	 }
+    if (path === "fiction/" || path === "comics/") {
+      pathID = `${path}${bookCategory}/${bookId}`;
+    } else {
+      pathID = `${path}${bookId}`;
+    }
 
+    if (buyButton) {
+      renderPopUp(buyButtonEvent);
+      actionOfBuyButton(pathID);
+    }
 
-	 if(buyButton){
-		renderPopUp(buyButtonEvent)
-	   actionOfBuyButton(pathID)
-	 }
-
-	 if(favButton){
-		renderPopUp(favButtonEvent)
-		actionOfFavButton(pathID)
-	 }
-
+    if (favButton) {
+      renderPopUp(favButtonEvent);
+      actionOfFavButton(pathID);
+    }
   });
 }

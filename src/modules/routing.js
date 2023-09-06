@@ -46,7 +46,6 @@ document.addEventListener("click", (event) => {
   if (isLink) {
     event.preventDefault();
     const href = isLink.getAttribute("href");
-    window.history.pushState(null, null, href);
     changeRoute(href);
   }
 });
@@ -60,8 +59,12 @@ function redirect(route) {
 }
 
 export function changeRoute(route) {
+  console.log(route)
+
   rootContainer.innerHTML = "";
+  window.history.pushState(null, null, route);
   const pageToMove = pages[route] || page404Route;
+
   if (route.includes(productItemPath)) {
     rootContainer.append(bookItemRoute());
     return;
@@ -71,11 +74,13 @@ export function changeRoute(route) {
 }
 
 function router(route) {
-  console.log(route);
   currentRoute = redirect(route);
   changeRoute(currentRoute);
 }
+
 router(window.location.pathname);
+
+window.addEventListener("popstate", () => changeRoute(window.location.pathname));
 
 export function createPage(currentPage) {
   const section = document.createElement("section");

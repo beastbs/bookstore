@@ -7,8 +7,7 @@ async function initBookList(category, container = ".book-list") {
     const content = await bookService.getBooksByCategory(category);
     const bookCard = new Book(container);
     bookCard.renderBookList(content);
-    bookItemListener(category)
-
+    bookItemListener(category);
   } catch (error) {
     console.error(error);
   }

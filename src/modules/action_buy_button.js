@@ -14,6 +14,7 @@ export async function actionOfBuyButton(path) {
     currency: currentBook.currency,
     image: currentBook.image,
     coverType: currentBook.coverType,
+    parentCategory: currentBook.parentCategory,
     category: currentBook.category,
     quantity: 1,
   };

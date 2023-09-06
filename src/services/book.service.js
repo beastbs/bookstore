@@ -13,8 +13,8 @@ const bookService = {
     const { data } = await httpService.get("bestsellers/");
     return data;
   },
-  getTodaysDeals: async () => {
-    const { data } = await httpService.get("todaydeals/");
+  getBestHorrors: async () => {
+    const { data } = await httpService.get("best-horrors/");
     return data;
   },
   getBookByQuery: async () => {},
