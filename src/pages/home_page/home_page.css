@@ -114,7 +114,7 @@
 
 .home__best-horrors .home__best-horrors-wrapper{
   display: flex;
-  width: 75%;
+  width: 55%;
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
@@ -144,10 +144,10 @@
   cursor: pointer;
 }
 .home__best-horrors .home__best-horrors-arrow-right{
-  right: 13.5%;
+  right: 22.8%;
 }
 .home__best-horrors .home__best-horrors-arrow-left{
-  left: 13.5%;
+  left: 22.8%;
 }
 
 .home__best-horrors .home__best-horrors-image{

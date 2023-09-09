@@ -77,12 +77,8 @@ export function renderFavoriteOrCartList(container, key, title) {
 
   container.addEventListener("input", (event) => {
     const totalAmount = bookListPage.querySelector(".shopping-page__amount");
-    const inputNumber = event.target.closest(
-      ".shopping-page__qty input[type='number']"
-    );
-    const id = inputNumber.parentNode.parentNode.querySelector(
-      ".shopping-page__image a"
-    ).id;
+    const inputNumber = event.target.closest(".shopping-page__qty input[type='number']");
+    const id = inputNumber.parentNode.parentNode.querySelector(".shopping-page__image a").id;
 
     if (inputNumber) {
       bookListFromLS = bookListFromLS.map((book) =>
@@ -91,7 +87,7 @@ export function renderFavoriteOrCartList(container, key, title) {
           : book
       );
       setDataInLS(key, bookListFromLS);
-      totalAmount.innerHTML = countTotalAmount(bookListFromLS);
+      totalAmount.innerHTML = `${countTotalAmount(bookListFromLS)}$`;
     }
 
   });

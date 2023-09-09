@@ -59,8 +59,6 @@ function redirect(route) {
 }
 
 export function changeRoute(route) {
-  console.log(route)
-
   rootContainer.innerHTML = "";
   window.history.pushState(null, null, route);
   const pageToMove = pages[route] || page404Route;

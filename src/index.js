@@ -13,7 +13,8 @@ import "@styles/book-item.css";
 import "@modules/navigation.js";
 import "@modules/routing.js";
 
-import { initializeApp } from "firebase/app";
+import { initializeApp } from "firebase/app"
+// import { getFirestore, collection, query, where, getDocs } from "firebase/firestore";
 
 // import { initialize } from "@modules/mock_data";
 // initialize();
@@ -29,4 +30,23 @@ const firebaseConfig = {
   appId: "1:950631887480:web:edd22aee1708f8ee7cb38d",
 };
 
-initializeApp(firebaseConfig);
+
+const firebaseApp = initializeApp(firebaseConfig);
+// const db = getFirestore(firebaseApp);
+
+// export async function searchBooksByTitle(title){
+//   const q = query(collection(db, "books"), where("title", ">=", title));
+//   const querySnapshot = await getDocs(q);
+//   const results = [];
+//   querySnapshot.forEach((doc) => {
+//     results.push(doc.data());
+//   });
+
+//   return results;
+// }
+
+
+
+
+
+

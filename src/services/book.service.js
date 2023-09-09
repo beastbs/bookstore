@@ -16,8 +16,7 @@ const bookService = {
   getBestHorrors: async () => {
     const { data } = await httpService.get("best-horrors/");
     return data;
-  },
-  getBookByQuery: async () => {},
+  }
 };
 
 export default bookService;
