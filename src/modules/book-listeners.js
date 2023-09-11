@@ -1,6 +1,6 @@
 import { renderPopUp } from "@modules/pop-up/pop-up";
-import { actionOfBuyButton } from "@modules/action_buy_button";
-import { actionOfFavButton } from "@modules/action_favorite_button";
+import { listenerOfBuyButton } from "@modules/listener_buy_button";
+import { listenerOfFavButton } from "@modules/listener_favorite_button";
 
 const buyButtonEvent = {
   background: "var(--global-success-color)",
@@ -32,12 +32,12 @@ export function bookItemListener(path, container = ".book-list") {
 
     if (buyButton) {
       renderPopUp(buyButtonEvent);
-      actionOfBuyButton(pathID);
+      listenerOfBuyButton(pathID);
     }
 
     if (favButton) {
       renderPopUp(favButtonEvent);
-      actionOfFavButton(pathID);
+      listenerOfFavButton(pathID);
     }
   });
 }

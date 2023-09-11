@@ -4,7 +4,7 @@ import { setDataInLS, getDataFromLS } from "@services/local_storage.service";
 export const favoriteKey = "favoriteList";
 let shoppingList;
 
-export async function actionOfFavButton(path) {
+export async function listenerOfFavButton(path) {
   const currentBook = await bookService.getBookByPath(path);
 
   shoppingList = getDataFromLS(favoriteKey) || [];

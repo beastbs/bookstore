@@ -1,9 +1,9 @@
 import { cutString } from "./cut_string";
 
 export function getCurrentPath(book) {
-  return book.parentCategory 
-     ? `/${book.parentCategory}/${book.category}`
-	  : `/${book.category}`
+  return book.parentCategory
+    ? `/${book.parentCategory}/${book.category}`
+    : `/${book.category}`;
 }
 
 export function bookCardTemplate(book) {
@@ -35,19 +35,16 @@ export function bookCardTemplate(book) {
 	  <div class="book__buttons-wrapper">
 
 		<buton class="book__button book__button-cart" id="main-button"">
-				<img src="https://firebasestorage.googleapis.com/v0/b/bookstore-a6f57.appspot.com/o/images%2Ficons%2Fbx-cart-add.svg?alt=media&token=d14896bb-1d5b-4624-9553-c2c21b3c43f8" alt="cart" />
-				<div>Buy</div>
+			<img src="https://firebasestorage.googleapis.com/v0/b/bookstore-a6f57.appspot.com/o/images%2Ficons%2Fbx-cart-add.svg?alt=media&token=d14896bb-1d5b-4624-9553-c2c21b3c43f8" alt="cart" />
+			<div>Buy</div>
 			</buton>
 
-			<buton class="book__button book__button-favorite" id="main-button"">
-				<img src="https://firebasestorage.googleapis.com/v0/b/bookstore-a6f57.appspot.com/o/images%2Ficons%2Ffav-icon.svg?alt=media&token=008dc334-a0c9-42a5-9226-fc7c7dfa9a96" alt="favorite" />
-				<div>Favorite</div>
-			</buton>
+		<buton class="book__button book__button-favorite" id="main-button"">
+			<img src="https://firebasestorage.googleapis.com/v0/b/bookstore-a6f57.appspot.com/o/images%2Ficons%2Ffav-icon.svg?alt=media&token=008dc334-a0c9-42a5-9226-fc7c7dfa9a96" alt="favorite" />
+			<div>Favorite</div>
+		</buton>
 
 		</div>
-
-		
-
 	`;
 
   return html;

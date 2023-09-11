@@ -24,6 +24,7 @@ module.exports = {
       "@styles": path.resolve(__dirname, "src/css/"),
       "@config": path.resolve(__dirname, "src/config/"),
       "@classes": path.resolve(__dirname, "src/classes/"),
+      "@mock": path.resolve(__dirname, "src/mock/"),
       "@modules": path.resolve(__dirname, "src/modules/"),
       "@services": path.resolve(__dirname, "src/services/"),
       "@components": path.resolve(__dirname, "src/components/")

@@ -20,7 +20,7 @@ function returnToHomePage(container) {
   }, 1000);
 
   setTimeout(() => {
-	 clearInterval(counterIntervalId);
+    clearInterval(counterIntervalId);
     changeRoute("/home");
   }, 5000);
 }

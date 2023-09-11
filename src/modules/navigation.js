@@ -8,6 +8,7 @@ const headerSearchModal = document.querySelector(".header__form-search");
 const headerSearchInput = headerSearchModal.querySelector("#search");
 const headerResetButton = headerSearchModal.querySelector(".header__form-clear");
 const headerQuickLinks = headerSearchModal.querySelector("#quick-links");
+const defaultLinksList = headerQuickLinks.querySelectorAll("li");
 const headerDropdownMenu = document.querySelectorAll(".header__navigation-dropdown");
 
 window.addEventListener("click", (event) => handleSearchModalListener(event));
@@ -17,9 +18,8 @@ function handleSearchModalListener(event) {
   const isSearchButton = event.target.closest(".header__button-search");
   const isClearInputButton = event.target.closest(".header__form-clear");
   const isQuickLink = event.target.closest("#quick-links a");
-  const hasActiveClassSearchForm = headerSearchModal.className.includes(
-    "header__form-search-active"
-  );
+  const hasActiveClassSearchForm = headerSearchModal.className.includes("header__form-search-active");
+  const ul = headerQuickLinks.querySelector("ul");
 
   if (isSearchButton && !hasActiveClassSearchForm) {
     headerSearchModal.classList.add("header__form-search-active");
@@ -37,13 +37,19 @@ function handleSearchModalListener(event) {
     headerSearchModal.classList.remove("header__form-search-active");
     bodyHTML.style.overflow = "visible";
     root.style.filter = "none";
+    headerSearchInput.value = "";
   }
 
   if (isClearInputButton) {
     headerSearchInput.value = "";
     headerSearchInput.focus();
-    toggleDisplayElement(headerQuickLinks, "block");
+    // toggleDisplayElement(headerQuickLinks, "block");
     toggleDisplayElement(headerResetButton, "none");
+    ul.innerHTML = "";
+    defaultLinksList.forEach(li => {
+      ul.append(li);
+    })
+
   }
 }
 
@@ -51,28 +57,16 @@ headerSearchInput.addEventListener("input", async (event) => {
   const inputValue = event.target.value.trim();
   const ul = headerQuickLinks.querySelector("ul");
 
-  const defaultList = `
-    <li>
-      <a href="/fiction/fantasy">
-        <img src="https://firebasestorage.googleapis.com/v0/b/bookstore-a6f57.appspot.com/o/images%2Ficons%2Flink-arrow.svg?alt=media&token=8ac82684-1d37-4837-b181-f0e625e809ac" alt="right arrow" />
-        <span>Fantasy</span>
-      </a>
-    </li>
-    <li>
-      <a href="/comics/marvel">
-        <img src="https://firebasestorage.googleapis.com/v0/b/bookstore-a6f57.appspot.com/o/images%2Ficons%2Flink-arrow.svg?alt=media&token=8ac82684-1d37-4837-b181-f0e625e809ac" alt="right arrow" />
-        <span>Marvel</span>
-      </a>
-    </li>
-  `
-
   if (inputValue) {
     const searchResult = await searchBooksByTitle(inputValue);
     toggleDisplayElement(headerResetButton, "block");
     displayResults(searchResult, ul);
   } else {
     toggleDisplayElement(headerResetButton, "none");
-    ul.innerHTML = defaultList;
+    ul.innerHTML = ""
+    defaultLinksList.forEach(li => {
+      ul.append(li);
+    })
   }
 
 });

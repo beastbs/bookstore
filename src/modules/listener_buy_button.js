@@ -4,7 +4,7 @@ import { setDataInLS ,getDataFromLS } from "@services/local_storage.service";
 export const shoppingKey = "shoppingList";
 let shoppingList;
 
-export async function actionOfBuyButton(path) {
+export async function listenerOfBuyButton(path) {
   const currentBook = await bookService.getBookByPath(path);
   const newBook = {
     title: currentBook.title,

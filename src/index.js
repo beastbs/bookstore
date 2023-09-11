@@ -32,6 +32,8 @@ const firebaseConfig = {
 
 
 const firebaseApp = initializeApp(firebaseConfig);
+
+// How it worked with Cloud Firestore
 // const db = getFirestore(firebaseApp);
 
 // export async function searchBooksByTitle(title){

@@ -108,7 +108,7 @@ export function renderFavoriteOrCartList(container, key, title) {
 
     if (removeItemButton) {
 
-		const totalAmount = bookListPage.querySelector(".shopping-page__amount");
+      const totalAmount = bookListPage.querySelector(".shopping-page__amount");
       const parentNode = removeItemButton.parentNode;
       const itemId = parentNode.querySelector("a").id;
 

@@ -1,15 +1,16 @@
 import httpService from "@services/http.service";
-import horrorBooks from "../mock/horror.json";
-import classicBooks from "../mock/classic.json";
-import fantasyBooks from "../mock/fantasy.json";
-import thrillerBooks from "../mock/thriller.json";
-import biographyHistory from "../mock/biography-history.json";
-import marvelBooks from "../mock/marvel.json";
-import dcBooks from "../mock/dc.json";
-import bestHorrors from "../mock/best-horrors.json";
 
-import childrenBooks from "../mock/children.json";
-import bestsellersBooks from "../mock/bestsellers.json";
+import horrorBooks from "@mock/horror.json";
+import classicBooks from "@mock/classic.json";
+import fantasyBooks from "@mock/fantasy.json";
+import thrillerBooks from "@mock/thriller.json";
+import biographyHistory from "@mock/biography-history.json";
+import marvelBooks from "@mock/marvel.json";
+import dcBooks from "@mock/dc.json";
+import bestHorrors from "@mock/best-horrors.json";
+
+import childrenBooks from "@mock/children.json";
+import bestsellersBooks from "@mock/bestsellers.json";
 
 
 const fictionPath = "fiction/";
